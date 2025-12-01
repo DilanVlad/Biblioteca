@@ -19,7 +19,12 @@ var app = builder.Build();
 
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Biblioteca API V1");
+    c.RoutePrefix = "swagger"; // Esto hará que /swagger funcione
+});
+
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
