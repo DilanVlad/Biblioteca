@@ -33,7 +33,7 @@ if (!app.Environment.IsProduction())
 {
     app.UseHttpsRedirection();
 }
-
+//sp
 
 app.UseAuthorization();
 
